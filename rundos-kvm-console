@@ -1,5 +1,5 @@
 #! /bin/sh
-exec qemu-system-i386 -machine type=pc -accel kvm -accel xen -accel hvf -accel whpx \
+exec qemu-system-i386 -machine type=pc -accel kvm -accel xen -accel hvf -accel whpx -accel tcg \
 -boot c \
 -nographic \
 -m 1164 -vga cirrus -rtc base=localtime \
