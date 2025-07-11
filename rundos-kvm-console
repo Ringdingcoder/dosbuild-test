@@ -1,0 +1,6 @@
+#! /bin/sh
+exec qemu-kvm -machine type=pc \
+-boot c \
+-nographic \
+-m 1164 -vga cirrus -rtc base=localtime \
+-drive media=disk,cache=unsafe,file=caldera.raw,index=0

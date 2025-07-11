@@ -1,0 +1,23 @@
+name: Build
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Run with qemu
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Repo clone
+        uses: actions/checkout@v4
+
+      - name: APT
+        run: sudo apt-get install dosbox && OWDOSBOX=dosbox ./build.sh rel
+
+      - name: Extract
+        run: zstd -d < caldera-test.raw.zst > caldera.raw
+
+      - name: Run it
+        run: |
+          ./rundos-kvm-console
