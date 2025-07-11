@@ -16,7 +16,7 @@ jobs:
         run: |
           ls -l /etc/apt/sources.list.d/
           cat /etc/apt/sources.list.d/ubuntu.sources
-          sed -ie '/priority:1/d' /etc/apt/apt-mirrors.txt
+          sudo sed -ie '/priority:1/d' /etc/apt/apt-mirrors.txt
           cat /etc/apt/apt-mirrors.txt
           sudo apt-get install qemu-system-x86
 
