@@ -33,7 +33,7 @@ curl -O https://www.mirrorservice.org/sites/ftp.delorie.com/pub/djgpp/current/v2
 
 mkdir ../djgpp
 cd ../djgpp
-set -e-
+set +e
 unzip ../dz/djdev205.zip
 unzip ../dz/bsh205bbr4.zip
 unzip ../dz/fil41br3.zip
@@ -44,6 +44,7 @@ unzip ../dz/txt20br3.zip
 unzip ../dz/grep228b.zip
 unzip ../dz/bnu2351b.zip
 unzip ../dz/gcc930b.zip
+set -e
 
 cd ..
 mcopy -sm djgpp X:
