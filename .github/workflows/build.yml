@@ -23,7 +23,7 @@ jobs:
       - name: Prepare
         run: |
           zstd -d < caldera-minimal-fat16.raw.zst > caldera.raw
-          echo "drive x: file="$PWD/caldera.raw" offset=32256" > ~/.mtoolsrc
+          echo "drive x: file=\"$PWD/caldera.raw\" offset=32256" > ~/.mtoolsrc
           ./prep.sh
 
       - name: Run it
