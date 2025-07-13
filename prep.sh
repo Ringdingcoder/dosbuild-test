@@ -15,7 +15,7 @@ mcopy run.bat X:
 
 mkdir dz
 cd dz
-curl -O https://mirror.koddos.net/djgpp/current/v2/djdev205.zip
+curl -O https://www.mirrorservice.org/sites/ftp.delorie.com/pub/djgpp/current/v2/djdev205.zip
 mkdir ../djgpp
 cd ../djgpp
 unzip ../dz/djdev205.zip
