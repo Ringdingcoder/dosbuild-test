@@ -27,6 +27,10 @@ curl -O https://www.mirrorservice.org/sites/ftp.delorie.com/pub/djgpp/current/v2
 curl -O https://www.mirrorservice.org/sites/ftp.delorie.com/pub/djgpp/current/v2gnu/grep228b.zip
 curl -O https://www.mirrorservice.org/sites/ftp.delorie.com/pub/djgpp/current/v2gnu/bnu2351b.zip
 curl -O https://www.mirrorservice.org/sites/ftp.delorie.com/pub/djgpp/current/v2gnu/gcc930b.zip
+curl -O https://www.mirrorservice.org/sites/ftp.delorie.com/pub/djgpp/current/v2gnu/dif37b.zip
+curl -O https://www.mirrorservice.org/sites/ftp.delorie.com/pub/djgpp/current/v2gnu/gwk500b.zip
+curl -O https://www.mirrorservice.org/sites/ftp.delorie.com/pub/djgpp/current/v2gnu/sed48b.zip
+curl -O https://www.mirrorservice.org/sites/ftp.delorie.com/pub/djgpp/current/v2gnu/tar112abr2.zip
 
 # THE BUILD SOURCE
 curl -O https://www.mirrorservice.org/sites/ftp.delorie.com/pub/djgpp/current/v2gnu/bsh4428s.zip
@@ -44,6 +48,10 @@ unzip ../dz/txt20br3.zip
 unzip ../dz/grep228b.zip
 unzip ../dz/bnu2351b.zip
 unzip ../dz/gcc930b.zip
+unzip ../dz/dif37b.zip
+unzip ../dz/gwk500b.zip
+unzip ../dz/sed48b.zip
+unzip ../dz/tar112abr2.zip
 set -e
 
 cd ..
