@@ -22,6 +22,9 @@ curl -O https://www.mirrorservice.org/sites/ftp.delorie.com/pub/djgpp/deleted/v2
 curl -O https://www.mirrorservice.org/sites/ftp.delorie.com/pub/djgpp/current/v2gnu/fnd4233br5.zip
 curl -O https://www.mirrorservice.org/sites/ftp.delorie.com/pub/djgpp/current/v2gnu/txi413br3.zip
 curl -O https://www.mirrorservice.org/sites/ftp.delorie.com/pub/djgpp/current/v2gnu/txt20br3.zip
+curl -O https://www.mirrorservice.org/sites/ftp.delorie.com/pub/djgpp/current/v2gnu/grep228b.zip
+curl -O https://www.mirrorservice.org/sites/ftp.delorie.com/pub/djgpp/current/v2gnu/bnu2351b.zip
+curl -O https://www.mirrorservice.org/sites/ftp.delorie.com/pub/djgpp/current/v2gnu/gcc930b.zip
 
 mkdir ../djgpp
 cd ../djgpp
@@ -32,6 +35,9 @@ unzip ../dz/mak41br2.zip
 unzip ../dz/fnd4233br5.zip
 unzip ../dz/txi413br3.zip
 unzip ../dz/txt20br3.zip
+unzip ../dz/grep228b.zip
+unzip ../dz/bnu2351b.zip
+unzip ../dz/gcc930b.zip
 
 cd ..
 mcopy -sm djgpp X:
