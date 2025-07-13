@@ -12,3 +12,13 @@ mcopy BIN/HDPMI32.EXE X:
 mcopy config.sys X:
 mcopy autoexec.bat X:
 mcopy run.bat X:
+
+mkdir dz
+cd dz
+curl -O https://mirror.koddos.net/djgpp/current/v2/djdev205.zip
+mkdir ../djgpp
+cd ../djgpp
+unzip ../dz/djdev205.zip
+cd ..
+
+mcopy -sm djgpp X:
