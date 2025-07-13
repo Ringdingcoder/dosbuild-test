@@ -58,6 +58,7 @@ unzip ../dz/m4-1419b.zip
 unzip ../dz/bsn241br2.zip
 set -e
 
+ls -l djgpp/manifest
 cd ..
 mcopy -sm djgpp X:
 
