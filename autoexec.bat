@@ -1,0 +1,4 @@
+@ECHO Off
+VERIFY OFF
+PROMPT [DR-DOS] $P$G
+run

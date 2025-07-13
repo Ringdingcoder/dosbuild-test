@@ -1,5 +1,5 @@
 #! /bin/bash
 
-zstd -d < caldera-test.raw.zst > caldera.raw
-echo "drive x: file="$PWD/caldera.raw" offset=32256" > ~/.mtoolsrc
 mdir X:
+curl -LO 'https://gitlab.com/FreeDOS/base/fdapm/-/raw/master/BIN/FDAPM.COM?ref_type=heads&inline=false'
+mcopy FDAPM.COM X:

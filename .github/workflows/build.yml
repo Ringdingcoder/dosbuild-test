@@ -18,10 +18,13 @@ jobs:
           cat /etc/apt/sources.list.d/ubuntu.sources
           sudo apt-get update
           cat /etc/apt/apt-mirrors.txt
-          sudo apt-get install qemu-system-x86
+          sudo apt-get install qemu-system-x86 mtools
 
       - name: Prepare
-        run: ./prep.sh
+        run: |
+          zstd -d < caldera-minimal-fat16.raw.zst > caldera.raw
+          echo "drive x: file="$PWD/caldera.raw" offset=32256" > ~/.mtoolsrc
+          ./prep.sh
 
       - name: Run it
         run: |
