@@ -20,8 +20,8 @@ jobs:
           cat /etc/apt/apt-mirrors.txt
           sudo apt-get install qemu-system-x86
 
-      - name: Extract
-        run: zstd -d < caldera-test.raw.zst > caldera.raw
+      - name: Prepare
+        run: ./prep.sh
 
       - name: Run it
         run: |
