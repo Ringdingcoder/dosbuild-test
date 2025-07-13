@@ -28,6 +28,9 @@ curl -O https://www.mirrorservice.org/sites/ftp.delorie.com/pub/djgpp/current/v2
 curl -O https://www.mirrorservice.org/sites/ftp.delorie.com/pub/djgpp/current/v2gnu/bnu2351b.zip
 curl -O https://www.mirrorservice.org/sites/ftp.delorie.com/pub/djgpp/current/v2gnu/gcc930b.zip
 
+# THE BUILD SOURCE
+curl -O https://www.mirrorservice.org/sites/ftp.delorie.com/pub/djgpp/current/v2gnu/bsh4428s.zip
+
 mkdir ../djgpp
 cd ../djgpp
 set -e-
@@ -44,3 +47,7 @@ unzip ../dz/gcc930b.zip
 
 cd ..
 mcopy -sm djgpp X:
+
+unzip dz/bsh4428s.zip
+mv gnu/bash* gnu/bash
+mcopy -sm gnu/bash X:
