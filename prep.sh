@@ -55,6 +55,7 @@ unzip ../dz/dif37b.zip
 unzip ../dz/gwk500b.zip
 unzip ../dz/sed48b.zip
 unzip ../dz/tar112abr2.zip
+unzip ../dz/shl2011br3.zip
 unzip ../dz/m4-1419b.zip
 unzip ../dz/bsn241br2.zip
 set -e
