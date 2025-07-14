@@ -1,0 +1,45 @@
+diff -ur bash-4.4.28.bak/execute_cmd.c bash-4.4.28/execute_cmd.c
+--- bash-4.4.28.bak/execute_cmd.c	2023-03-26 23:35:22.000000000 +0200
++++ bash-4.4.28/execute_cmd.c	2025-07-14 20:42:43.994176236 +0200
+@@ -2105,7 +2105,6 @@
+   if (cp == 0)
+     return;
+ 
+-  BLOCK_SIGNAL (SIGCHLD, set, oset);
+   cp->c_lock = 3;
+   coproc_unsetvars (cp);
+   FREE (cp->c_name);
+@@ -2116,7 +2115,6 @@
+   coproc_init (cp);
+   cp->c_lock = 0;
+ #endif
+-  UNBLOCK_SIGNAL (oset);
+ }
+ 
+ /* Placeholder for now.  Will require changes for multiple coprocs */
+@@ -2412,8 +2410,6 @@
+   sh_openpipe ((int *)&rpipe);	/* 0 = parent read, 1 = child write */
+   sh_openpipe ((int *)&wpipe); /* 0 = child read, 1 = parent write */
+ 
+-  BLOCK_SIGNAL (SIGCHLD, set, oset);
+-
+   coproc_pid = make_child (savestring (tcmd), 1);
+ 
+   if (coproc_pid == 0)
+@@ -2421,7 +2417,6 @@
+       close (rpipe[0]);
+       close (wpipe[1]);
+ 
+-      UNBLOCK_SIGNAL (oset);
+       estat = execute_in_subshell (command, 1, wpipe[0], rpipe[1], fds_to_close);
+ 
+       fflush (stdout);
+@@ -2443,8 +2438,6 @@
+ 
+   coproc_setvars (cp);
+ 
+-  UNBLOCK_SIGNAL (oset);
+-
+ #if 0
+   itrace ("execute_coproc: [%d] %s", coproc_pid, the_printed_command);
+ #endif

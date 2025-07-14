@@ -66,4 +66,6 @@ mcopy -sm djgpp X:
 
 unzip dz/bsh4428s.zip
 mv gnu/bash* gnu/bash
-mcopy -sm gnu/bash X:
+cd gnu/bash
+patch -p1 < ../../bash-sigchld.patch
+mcopy -sm ../bash X:
