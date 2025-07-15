@@ -8,7 +8,7 @@ ls
 cd bash\0build
 del config.cache
 make clean
-..\djgpp\config ./.. no-nls
+call ..\djgpp\config ./.. no-nls
 make
 
 shutdown
