@@ -28,13 +28,14 @@ jobs:
 
       - name: Run it
         run: |
-          mcopy X:bash/0build/config.log .
-          mcopy X:bash/0build/configure.org .
+          sudo ./rundos-kvm-console
+          mcopy X:bash/0build/bash.exe .
+          mcopy X:bash/0build/sh.exe .
 
       - name:  artifacts
         uses: actions/upload-artifact@v4
         with:
           name: bshbin
           path: |
-            config.log
-            configure.org
+            bash.exe
+            sh.exe
