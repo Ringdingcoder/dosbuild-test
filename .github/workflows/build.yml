@@ -28,8 +28,8 @@ jobs:
 
       - name: Run it
         run: |
-	  mcopy X:bash/0build/config.log .
-	  mcopy X:bash/0build/configure.org .
+          mcopy X:bash/0build/config.log .
+          mcopy X:bash/0build/configure.org .
 
       - name:  artifacts
         uses: actions/upload-artifact@v4
@@ -37,4 +37,4 @@ jobs:
           name: bshbin
           path: |
             config.log
-	    configure.org
+            configure.org
