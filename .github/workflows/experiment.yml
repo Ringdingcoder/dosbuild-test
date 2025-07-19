@@ -1,0 +1,15 @@
+name: Experimental stuff
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Run on Ubuntu
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Run it
+        run: |
+	  cat /proc/sys/vm/mmap_min_addr
+	  echo 4096 |sudo tee /proc/sys/vm/mmap_min_addr
+	  cat /proc/sys/vm/mmap_min_addr
