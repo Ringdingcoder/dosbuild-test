@@ -29,8 +29,8 @@ jobs:
       - name: Run it
         run: |
           sudo ./rundos-kvm-console
-          mcopy X:bash/0build/bash.exe .
-          mcopy X:bash/0build/sh.exe .
+          mcopy X:bash.exe .
+          mcopy X:sh.exe .
 
       - name:  artifacts
         uses: actions/upload-artifact@v4

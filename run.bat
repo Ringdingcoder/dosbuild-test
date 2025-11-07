@@ -16,5 +16,7 @@ del config.cache
 make clean
 call ..\djgpp\config ./.. no-nls
 make
+copy bash.exe C:
+copy sh.exe C:
 
 shutdown
