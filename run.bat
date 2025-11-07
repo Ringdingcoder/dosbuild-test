@@ -19,4 +19,4 @@ make
 copy bash.exe C:
 copy sh.exe C:
 
-shutdown
+C:shutdown
