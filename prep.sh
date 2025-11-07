@@ -15,7 +15,7 @@ unzip -o fdrv-3.zip
 mcopy FDAPM.COM X:
 mcopy doslfn.com X:
 mcopy BIN/HDPMI32.EXE X:
-mcopy HimemX2.exe X:
+mcopy HimemX.exe X:
 mcopy shsurdrv.exe X:
 mcopy config.sys X:
 mcopy autoexec.bat X:
