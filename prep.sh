@@ -68,6 +68,7 @@ set -e
 
 ls -l manifest
 cd ..
+mcopy -sm djgpp X:
 tar cf djgpp.tar djgpp
 mcopy djgpp.tar X:
 

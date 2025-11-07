@@ -7,7 +7,7 @@ D:
 C:\djgpp\bin\tar x C:/djgpp.tar
 C:\djgpp\bin\tar x C:/bash.tar
 
-path D:\djgpp\bin;C:\
+path D:\djgpp\bin
 set DJGPP=D:/djgpp/djgpp.env
 ls
 
