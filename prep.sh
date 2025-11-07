@@ -11,7 +11,7 @@ curl -LO https://github.com/Baron-von-Riedesel/HimemX/releases/download/v3.39/Hi
 curl -O http://adoxa.altervista.org/shsufdrv/fdrv-3.zip
 unzip HXRT222.zip
 unzip HimemX339.zip
-unzip fdrv-3.zip
+unzip -o fdrv-3.zip
 mcopy FDAPM.COM X:
 mcopy doslfn.com X:
 mcopy BIN/HDPMI32.EXE X:
