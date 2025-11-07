@@ -7,10 +7,16 @@ curl -LO 'https://gitlab.com/FreeDOS/base/fdapm/-/raw/master/BIN/FDAPM.COM?ref_t
 curl -L -o doslfn.zip 'http://adoxa.altervista.org/doslfn/dl.php?f=doslfn'
 unzip doslfn.zip
 curl -LO https://github.com/Baron-von-Riedesel/HX/releases/download/v2.22/HXRT222.zip
+curl -LO https://github.com/Baron-von-Riedesel/HimemX/releases/download/v3.39/HimemX339.zip
+curl -O http://adoxa.altervista.org/shsufdrv/fdrv-3.zip
 unzip HXRT222.zip
+unzip HimemX339.zip
+unzip fdrv-3.zip
 mcopy FDAPM.COM X:
 mcopy doslfn.com X:
 mcopy BIN/HDPMI32.EXE X:
+mcopy HimemX2.exe X:
+mcopy shsurdrv.exe X:
 mcopy config.sys X:
 mcopy autoexec.bat X:
 mcopy run.bat X:
@@ -62,10 +68,13 @@ set -e
 
 ls -l manifest
 cd ..
-mcopy -sm djgpp X:
+tar cf djgpp.tar djgpp
+mcopy djgpp.tar X:
 
 unzip dz/bsh4428s.zip
 mv gnu/bash* gnu/bash
 cd gnu/bash
 patch -p1 < ../../bash-sigchld.patch
-mcopy -sm ../bash X:
+cd ..
+tar cf bash.tar bash
+mcopy bash.tar X:
