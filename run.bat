@@ -19,4 +19,5 @@ make
 copy bash.exe C:
 copy sh.exe C:
 
-C:fdapm poweroff
+C:
+shutdown
