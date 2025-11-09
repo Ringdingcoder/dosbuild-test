@@ -12,7 +12,8 @@ set DJGPP=D:/djgpp/djgpp.env
 ls
 
 cd bash\0build
-del config.cache
+rm config.cache
+del config~1.cac
 make clean
 call ..\djgpp\config ./.. no-nls
 make
