@@ -29,7 +29,7 @@ cd dz
 curl -O https://www.mirrorservice.org/sites/ftp.delorie.com/pub/djgpp/current/v2/djdev205.zip
 curl -O https://www.mirrorservice.org/sites/ftp.delorie.com/pub/djgpp/current/v2gnu/bsh4428b.zip
 curl -O https://www.mirrorservice.org/sites/ftp.delorie.com/pub/djgpp/current/v2gnu/fil41br3.zip
-curl -O https://www.mirrorservice.org/sites/ftp.delorie.com/pub/djgpp/deleted/v2gnu/mak41br2.zip
+curl -O https://www.mirrorservice.org/sites/ftp.delorie.com/pub/djgpp/current/v2gnu/mak44b.zip
 curl -O https://www.mirrorservice.org/sites/ftp.delorie.com/pub/djgpp/current/v2gnu/fnd4233br5.zip
 curl -O https://www.mirrorservice.org/sites/ftp.delorie.com/pub/djgpp/current/v2gnu/txi413br3.zip
 curl -O https://www.mirrorservice.org/sites/ftp.delorie.com/pub/djgpp/current/v2gnu/txt20br3.zip
@@ -53,7 +53,7 @@ set +e
 unzip ../dz/djdev205.zip
 unzip ../dz/bsh4428b.zip
 unzip ../dz/fil41br3.zip
-unzip ../dz/mak41br2.zip
+unzip ../dz/mak44.zip
 unzip ../dz/fnd4233br5.zip
 unzip ../dz/txi413br3.zip
 unzip ../dz/txt20br3.zip
