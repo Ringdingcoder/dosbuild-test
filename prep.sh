@@ -53,7 +53,7 @@ set +e
 unzip ../dz/djdev205.zip
 unzip ../dz/bsh4428b.zip
 unzip ../dz/fil41br3.zip
-unzip ../dz/mak44.zip
+unzip ../dz/mak44b.zip
 unzip ../dz/fnd4233br5.zip
 unzip ../dz/txi413br3.zip
 unzip ../dz/txt20br3.zip
