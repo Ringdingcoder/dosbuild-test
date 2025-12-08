@@ -4,7 +4,7 @@ doslfn
 hdpmi32 -r
 
 D:
-C:\djgpp\bin\tar xf C:/djgpp.tar
+C:\tar xf C:/djgpp.tar
 C:\djgpp\bin\tar xf C:/bash.tar
 
 path D:\djgpp\bin

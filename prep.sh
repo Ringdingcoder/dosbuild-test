@@ -69,6 +69,7 @@ unzip ../dz/m4-1419b.zip
 unzip ../dz/bsn241br2.zip
 set -e
 
+mcopy bin/tar.exe X:
 ls -l manifest
 cd ..
 tar cf djgpp.tar djgpp
