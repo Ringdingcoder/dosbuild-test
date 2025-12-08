@@ -2,7 +2,6 @@
 
 set -e
 
-mdir X:
 curl -O https://pushbx.org/ecm/download/edrdos/d110721b.zip
 unzip d110721b.zip
 mcopy DRBIO.SYS DRDOS.SYS COMMAND.COM X:
@@ -48,7 +47,7 @@ curl -O https://www.mirrorservice.org/sites/ftp.delorie.com/pub/djgpp/current/v2
 # THE BUILD SOURCE
 curl -O https://www.mirrorservice.org/sites/ftp.delorie.com/pub/djgpp/current/v2gnu/bsh4428s.zip
 
-mkdir ../djgpp
+mkdir -p ../djgpp
 cd ../djgpp
 set +e
 unzip ../dz/djdev205.zip
@@ -72,7 +71,6 @@ set -e
 
 ls -l manifest
 cd ..
-mcopy -sm djgpp X:
 tar cf djgpp.tar djgpp
 mcopy djgpp.tar X:
 
@@ -83,3 +81,4 @@ patch -p1 < ../../bash-sigchld.patch
 cd ..
 tar cf bash.tar bash
 mcopy bash.tar X:
+mdir X:
