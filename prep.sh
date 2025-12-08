@@ -5,7 +5,7 @@ set -e
 mdir X:
 curl -O https://pushbx.org/ecm/download/edrdos/d110721b.zip
 unzip d110721b.zip
-mcopy drbio.sys drdos.sys command.com X:
+mcopy DRBIO.SYS DRDOS.SYS COMMAND.COM X:
 curl -LO 'https://gitlab.com/FreeDOS/base/fdapm/-/raw/master/BIN/FDAPM.COM?ref_type=heads&inline=false'
 curl -O http://adoxa.altervista.org/doslfn/doslfn.zip
 unzip doslfn.zip
