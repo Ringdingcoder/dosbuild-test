@@ -3,8 +3,11 @@
 set -e
 
 mdir X:
+curl -O https://pushbx.org/ecm/download/edrdos/d110721b.zip
+unzip d110721b.zip
+mcopy drbio.sys drdos.sys command.com X:
 curl -LO 'https://gitlab.com/FreeDOS/base/fdapm/-/raw/master/BIN/FDAPM.COM?ref_type=heads&inline=false'
-curl -L -o doslfn.zip 'http://adoxa.altervista.org/doslfn/dl.php?f=doslfn'
+curl -O http://adoxa.altervista.org/doslfn/doslfn.zip
 unzip doslfn.zip
 curl -LO https://github.com/Baron-von-Riedesel/HX/releases/download/v2.22/HXRT222.zip
 curl -LO https://github.com/Baron-von-Riedesel/HimemX/releases/download/v3.39/HimemX339.zip
@@ -20,8 +23,9 @@ mcopy shsurdrv.exe X:
 mcopy config.sys X:
 mcopy autoexec.bat X:
 mcopy run.bat X:
+mcopy shutdown.bat X:
 
-mkdir dz
+mkdir -p dz
 cd dz
 curl -O https://www.mirrorservice.org/sites/ftp.delorie.com/pub/djgpp/current/v2/djdev205.zip
 curl -O https://www.mirrorservice.org/sites/ftp.delorie.com/pub/djgpp/current/v2gnu/bsh4428b.zip
