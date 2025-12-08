@@ -5,7 +5,7 @@ hdpmi32 -r
 
 D:
 C:\tar xf C:/djgpp.tar
-C:\djgpp\bin\tar xf C:/bash.tar
+djgpp\bin\tar xf C:/bash.tar
 
 path D:\djgpp\bin
 set DJGPP=D:/djgpp/djgpp.env
