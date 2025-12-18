@@ -2,15 +2,15 @@
 
 set -e
 
-curl --skip-existing -O https://pushbx.org/ecm/download/edrdos/d110721b.zip
+curl ${SKIP_EXISTING} -O https://pushbx.org/ecm/download/edrdos/d110721b.zip
 unzip d110721b.zip
 mcopy DRBIO.SYS DRDOS.SYS COMMAND.COM X:
-curl --skip-existing -LO 'https://gitlab.com/FreeDOS/base/fdapm/-/raw/master/BIN/FDAPM.COM?ref_type=heads&inline=false'
-curl --skip-existing -O http://adoxa.altervista.org/doslfn/doslfn.zip
+curl ${SKIP_EXISTING} -LO 'https://gitlab.com/FreeDOS/base/fdapm/-/raw/master/BIN/FDAPM.COM?ref_type=heads&inline=false'
+curl ${SKIP_EXISTING} -O http://adoxa.altervista.org/doslfn/doslfn.zip
 unzip doslfn.zip
-curl --skip-existing -LO https://github.com/Baron-von-Riedesel/HX/releases/download/v2.22/HXRT222.zip
-curl --skip-existing -LO https://github.com/Baron-von-Riedesel/HimemX/releases/download/v3.39/HimemX339.zip
-curl --skip-existing -O http://adoxa.altervista.org/shsufdrv/fdrv-3.zip
+curl ${SKIP_EXISTING} -LO https://github.com/Baron-von-Riedesel/HX/releases/download/v2.22/HXRT222.zip
+curl ${SKIP_EXISTING} -LO https://github.com/Baron-von-Riedesel/HimemX/releases/download/v3.39/HimemX339.zip
+curl ${SKIP_EXISTING} -O http://adoxa.altervista.org/shsufdrv/fdrv-3.zip
 unzip HXRT222.zip
 unzip HimemX339.zip
 unzip -o fdrv-3.zip
@@ -26,26 +26,26 @@ mcopy shutdown.bat X:
 
 mkdir -p dz
 cd dz
-curl --skip-existing -O https://www.mirrorservice.org/sites/ftp.delorie.com/pub/djgpp/current/v2/djdev205.zip
-curl --skip-existing -O https://www.mirrorservice.org/sites/ftp.delorie.com/pub/djgpp/current/v2gnu/bsh4428b.zip
-curl --skip-existing -O https://www.mirrorservice.org/sites/ftp.delorie.com/pub/djgpp/current/v2gnu/fil41br3.zip
-curl --skip-existing -O https://www.mirrorservice.org/sites/ftp.delorie.com/pub/djgpp/current/v2gnu/mak44b.zip
-curl --skip-existing -O https://www.mirrorservice.org/sites/ftp.delorie.com/pub/djgpp/current/v2gnu/fnd4233br5.zip
-curl --skip-existing -O https://www.mirrorservice.org/sites/ftp.delorie.com/pub/djgpp/current/v2gnu/txi413br3.zip
-curl --skip-existing -O https://www.mirrorservice.org/sites/ftp.delorie.com/pub/djgpp/current/v2gnu/txt20br3.zip
-curl --skip-existing -O https://www.mirrorservice.org/sites/ftp.delorie.com/pub/djgpp/current/v2gnu/grep228b.zip
-curl --skip-existing -O https://www.mirrorservice.org/sites/ftp.delorie.com/pub/djgpp/current/v2gnu/bnu2351b.zip
-curl --skip-existing -O https://www.mirrorservice.org/sites/ftp.delorie.com/pub/djgpp/current/v2gnu/gcc930b.zip
-curl --skip-existing -O https://www.mirrorservice.org/sites/ftp.delorie.com/pub/djgpp/current/v2gnu/dif37b.zip
-curl --skip-existing -O https://www.mirrorservice.org/sites/ftp.delorie.com/pub/djgpp/current/v2gnu/gwk500b.zip
-curl --skip-existing -O https://www.mirrorservice.org/sites/ftp.delorie.com/pub/djgpp/current/v2gnu/sed48b.zip
-curl --skip-existing -O https://www.mirrorservice.org/sites/ftp.delorie.com/pub/djgpp/current/v2gnu/tar112abr2.zip
-curl --skip-existing -O https://www.mirrorservice.org/sites/ftp.delorie.com/pub/djgpp/current/v2gnu/shl2011br3.zip
-curl --skip-existing -O https://www.mirrorservice.org/sites/ftp.delorie.com/pub/djgpp/current/v2gnu/m4-1419b.zip
-curl --skip-existing -O https://www.mirrorservice.org/sites/ftp.delorie.com/pub/djgpp/current/v2gnu/bsn241br2.zip
+curl ${SKIP_EXISTING} -O https://www.mirrorservice.org/sites/ftp.delorie.com/pub/djgpp/current/v2/djdev205.zip
+curl ${SKIP_EXISTING} -O https://www.mirrorservice.org/sites/ftp.delorie.com/pub/djgpp/current/v2gnu/bsh4428b.zip
+curl ${SKIP_EXISTING} -O https://www.mirrorservice.org/sites/ftp.delorie.com/pub/djgpp/current/v2gnu/fil41br3.zip
+curl ${SKIP_EXISTING} -O https://www.mirrorservice.org/sites/ftp.delorie.com/pub/djgpp/current/v2gnu/mak44b.zip
+curl ${SKIP_EXISTING} -O https://www.mirrorservice.org/sites/ftp.delorie.com/pub/djgpp/current/v2gnu/fnd4233br5.zip
+curl ${SKIP_EXISTING} -O https://www.mirrorservice.org/sites/ftp.delorie.com/pub/djgpp/current/v2gnu/txi413br3.zip
+curl ${SKIP_EXISTING} -O https://www.mirrorservice.org/sites/ftp.delorie.com/pub/djgpp/current/v2gnu/txt20br3.zip
+curl ${SKIP_EXISTING} -O https://www.mirrorservice.org/sites/ftp.delorie.com/pub/djgpp/current/v2gnu/grep228b.zip
+curl ${SKIP_EXISTING} -O https://www.mirrorservice.org/sites/ftp.delorie.com/pub/djgpp/current/v2gnu/bnu2351b.zip
+curl ${SKIP_EXISTING} -O https://www.mirrorservice.org/sites/ftp.delorie.com/pub/djgpp/current/v2gnu/gcc930b.zip
+curl ${SKIP_EXISTING} -O https://www.mirrorservice.org/sites/ftp.delorie.com/pub/djgpp/current/v2gnu/dif37b.zip
+curl ${SKIP_EXISTING} -O https://www.mirrorservice.org/sites/ftp.delorie.com/pub/djgpp/current/v2gnu/gwk500b.zip
+curl ${SKIP_EXISTING} -O https://www.mirrorservice.org/sites/ftp.delorie.com/pub/djgpp/current/v2gnu/sed48b.zip
+curl ${SKIP_EXISTING} -O https://www.mirrorservice.org/sites/ftp.delorie.com/pub/djgpp/current/v2gnu/tar112abr2.zip
+curl ${SKIP_EXISTING} -O https://www.mirrorservice.org/sites/ftp.delorie.com/pub/djgpp/current/v2gnu/shl2011br3.zip
+curl ${SKIP_EXISTING} -O https://www.mirrorservice.org/sites/ftp.delorie.com/pub/djgpp/current/v2gnu/m4-1419b.zip
+curl ${SKIP_EXISTING} -O https://www.mirrorservice.org/sites/ftp.delorie.com/pub/djgpp/current/v2gnu/bsn241br2.zip
 
 # THE BUILD SOURCE
-curl --skip-existing -O https://www.mirrorservice.org/sites/ftp.delorie.com/pub/djgpp/current/v2gnu/bsh4428s.zip
+curl ${SKIP_EXISTING} -O https://www.mirrorservice.org/sites/ftp.delorie.com/pub/djgpp/current/v2gnu/bsh4428s.zip
 
 mkdir -p ../djgpp
 cd ../djgpp
