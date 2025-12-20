@@ -1,0 +1,15 @@
+name: Experimental stuff
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Run on Ubuntu
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Run it
+        run: |
+          curl -o list.txt.gpg https://github.com/user-attachments/files/24272139/list.txt.gpg.zip
+          gpg --passphrase ${{ secrets.TOOLS_KEY }} list.txt.gpg
+          cat list.txt
