@@ -10,6 +10,6 @@ jobs:
     steps:
       - name: Run it
         run: |
-          curl -o list.txt.gpg https://github.com/user-attachments/files/24272139/list.txt.gpg.zip
+          curl -Lo list.txt.gpg https://github.com/user-attachments/files/24272139/list.txt.gpg.zip
           gpg --batch --passphrase ${{ secrets.TOOLS_KEY }} list.txt.gpg
           cat list.txt
