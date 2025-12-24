@@ -22,6 +22,8 @@ jobs:
           gpg --batch --passphrase ${{ secrets.TOOLS_KEY }} cpp31.tar.gpg
           curl -Lo masm611.tar.gpg https://github.com/user-attachments/files/24272460/masm611.tar.gpg.zip
           gpg --batch --passphrase ${{ secrets.TOOLS_KEY }} masm611.tar.gpg
+          curl -Lo msvc.tar.gpg https://github.com/user-attachments/files/24272459/msvc.tar.gpg.zip
+          gpg --batch --passphrase ${{ secrets.TOOLS_KEY }} msvc.tar.gpg
 
           zstd -d < caldera-minimal-fat16.raw.zst > caldera.raw
           truncate -s 1990m caldera.raw
