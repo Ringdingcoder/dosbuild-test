@@ -1,4 +1,4 @@
-name: Experimental stuff
+name: Proprietary tool test
 
 on:
   workflow_dispatch:

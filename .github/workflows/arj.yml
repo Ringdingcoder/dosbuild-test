@@ -1,0 +1,40 @@
+name: ARJ
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Run with qemu
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Repo clone
+        uses: actions/checkout@v4
+
+      - name: APT
+        run: |
+          sudo apt-get update
+          sudo apt-get install qemu-system-x86 mtools
+
+      - name: Prepare
+        run: |
+          curl -Lo cpp31.tar.gpg https://github.com/user-attachments/files/24272458/cpp31.tar.gpg.zip
+          gpg --batch --passphrase ${{ secrets.TOOLS_KEY }} cpp31.tar.gpg
+          zstd -d < caldera-minimal-fat16.raw.zst > caldera.raw
+          truncate -s 1990m caldera.raw
+          echo "drive x: file=\"$PWD/caldera.raw\" offset=32256" > ~/.mtoolsrc
+          ./prep-arj.sh
+
+      - name: Run it
+        run: |
+          sudo ./rundos-kvm-console
+          mcopy X:bash.exe .
+          mcopy X:sh.exe .
+
+      - name:  artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: bshbin
+          path: |
+            bash.exe
+            sh.exe
