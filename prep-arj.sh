@@ -23,6 +23,6 @@ mcopy -sm arj X:
 tar xf cpp31.tar
 mcopy -sm cpp31 X:
 tar xf masm611.tar
-mcopy -sm masm611 X:
+mcopy -sm MASM611 X:
 tar xf msvc.tar
-mcopy -sm msvc X:
+mcopy -sm MSVC X:
