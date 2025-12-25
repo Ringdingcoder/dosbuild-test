@@ -18,6 +18,7 @@ curl ${SKIP_EXISTING} -LO 'https://downloads.sourceforge.net/project/arj/arj/2.7
 
 tar xf arj-3.10.22.tar.gz
 mv arj-3.10.22 arj
+mkdir -p arj/bc31/en/rs/tools
 mcopy -sm arj X:
 
 tar xf cpp31.tar
