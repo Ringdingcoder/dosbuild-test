@@ -22,7 +22,7 @@ mkdir -p arj/bc31/en/rs/tools
 mcopy -sm arj X:
 
 tar xf cpp31.tar
-sed -ie 's/E:\CLEAN/C:/' cpp31/BIN/TURBOC.CFG
+sed -ie 's/E:\\CLEAN/C:/' cpp31/BIN/TURBOC.CFG
 mcopy -sm cpp31 X:
 tar xf masm611.tar
 mcopy -sm MASM611 X:
