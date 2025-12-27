@@ -5,15 +5,7 @@
  LINKER = tlink.exe
  COPT = -I$(BASEDIR) -o$@ @settings\$(CC_CODE).sts %s
 -LINKLIB =
-+LINKLIB = C:\cpp31\lib\
++LINKLIB = C:\cpp31\lib^\
  LINKOPT =
  !else if "$(COMPILER)" == "BC40"
  CC_CODE = $(COMPILER)
-@@ -950,6 +950,7 @@
- $(MAP_LINKOPT)$(@R).map
- $(STD_LIB)
- <<
-+ type $(BASEDIR_T)today.lrf
-  $(LINKER) @$(BASEDIR_T)today.lrf$(LAST_LINKOPT)
-  if exist $(BASEDIR_T)today.lrf del $(BASEDIR_T)today.lrf
- 
